@@ -23,7 +23,6 @@ def order_drink():
             print("That's not on the menu")
             
             
-            
 
 print("Welcome to the Amazing Cafe!")
 time.sleep(2)
