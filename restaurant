@@ -1,4 +1,38 @@
-menu = " 
+import time
+total = 0
+menu = ""
+drinks = ["Coffee", "Tea", "milks", "juices"]
+
+def add_order():
+    total += 1
+    
+def pay_bill():
+    print("Your total is: $" + str(total) + ".00")
+
+def order_drink():
+    order = input("What can I get for you?: ")
+    for drink in drinks:
+        if order == drink:
+            menu += str(order)
+            an = input("Would you like another order? ")
+            if an == "yes" or "YES" or "Yes" or "y" or "Y":
+                order_drink()
+            elif an == "no" or "NO" or "No" or "n" or "N":
+                pay_bill()
+        else:
+            print("That's not on the menu")
+            
+            
+            
+
+print("Welcome to the Amazing Cafe!")
+time.sleep(2)
+print("We have: ")
+for drink in drinks:
+    print(drink)
+time.sleep(2)
+order_drink()
 
 
-print("Welcome to Hasti's Restaurant!")
+        
+        
