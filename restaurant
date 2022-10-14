@@ -1,6 +1,5 @@
 import time
 total = 0
-menu = ""
 drinks = ["Coffee", "Tea", "milks", "juices"]
 
 def add_order():
@@ -8,19 +7,20 @@ def add_order():
     
 def pay_bill():
     print("Your total is: $" + str(total) + ".00")
-
-def order_drink():
-    order = input("What can I get for you?: ")
-    for drink in drinks:
-        if order == drink:
-            menu += str(order)
+    
+    
+    
+for drink in drinks:
+    def order_drink():
+        order = input("What can I get for you?: ")
+        add_order()
+        for drink in drink:
             an = input("Would you like another order? ")
             if an == "yes" or "YES" or "Yes" or "y" or "Y":
                 order_drink()
             elif an == "no" or "NO" or "No" or "n" or "N":
                 pay_bill()
-        else:
-            print("That's not on the menu")
+       
                    
 
 print("Welcome to the Amazing Cafe!")
